@@ -1,8 +1,8 @@
-"""[Topinnie][Leftoutie][Bottomoutie][Rightinnie]:
+"""[Topinnie][Leftoutie][Bottomoutie][Rightinnie] and
+shdc = [spade][heart][diamond][club]:
 =>ccdd cdhc ddhh
 =>hssc hdsd sshc
-=>dhcc sdsh shch
-shdc = [spade][heart][diamond][club]"""
+=>dhcc sdsh shch"""
 
 import sys
 
@@ -17,9 +17,9 @@ def solved(solution,pieces):
   discards = []
   while pieces:
     discards.append(pieces.pop())
-    if None is not_match_one_piece(solution,discards[-1]):
-      full_solution = solved(solution+discards[-1:],pieces+discards[:-1])
-      if full_solution: return full_solution
+    if not_match_one_piece(solution,discards[-1]): continue
+    full_solution = solved(solution+discards[-1:],pieces+discards[:-1])
+    if full_solution: return full_solution
 
 if "__main__" == __name__:
   end_solution = solved([],sum([s[2:].strip().split() for s in __doc__.split('\n') if '=>' == s[:2]],[]))
