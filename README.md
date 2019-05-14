@@ -1,5 +1,5 @@
 # one_tough_puzzle
-Designed to find a restricted solution, ir possible, to the One Tough Puzzle by Great American Puzzle Factory.
+Designed to find a restricted solution, if possible, to the One Tough Puzzle by Great American Puzzle Factory.
 
 Restriction:  assume all pieces are rotated the same way in the solution (and per the image below):
 
