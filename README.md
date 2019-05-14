@@ -1,7 +1,7 @@
 # one_tough_puzzle
-Designed to solve the One Tough Puzzle by Great American Puzzle Factory.
+Designed to find a restricted solution, ir possible, to the One Tough Puzzle by Great American Puzzle Factory.
 
-Assumes all pieces are rotated the same way in the solution (and per the image below):
+Restriction:  assume all pieces are rotated the same way in the solution (and per the image below):
 
 * Top innie
 * Left outie
