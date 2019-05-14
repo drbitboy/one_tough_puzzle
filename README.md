@@ -14,3 +14,10 @@ The Python script's docstring contains the pieces' definition, again per the ima
 
 ![](https://github.com/drbitboy/one_tough_puzzle/raw/master/one_tough_puzzle.jpg)
 
+## Manifest
+
+* otp.py - Solution script
+* Makefile - Test wrapper
+* test_output.txt - Regression est output
+* one_tough_puzzle.jpg - Image of pieces that are modeled
+* README.md - This file
