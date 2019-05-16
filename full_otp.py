@@ -22,10 +22,15 @@ class PIECE(object):
     N.B. there are eight unique [suit+innie+outie] pairs possible
 
     """
-    ### Extend results by repeating first three suits,
+    ### Extend results by repeating first three suits, so eight
+    ### characters starting at an offset (self.top) into the string will
+    ### contain four [suit+innie/outie] pairs in sequences, starting at
+    ### the one rotated to the top
     self.iooiioo = ''.join(['{0}{1}'.format(suit,io) for suit,io in zip(suits+suits,'iooiioo')])
 
-    ### Invert innies to outies and vice versa
+    ### Invert innies to outies and vice versa, for string comparisons
+    ### that will identify where potential neighbors will mate with
+    ### this piece
     self.oiiooii = self.iooiioo.replace('i','I').replace('o','i').replace('I','o')
 
     ### Initialize rotation
@@ -42,7 +47,8 @@ class PIECE(object):
     """
     self.top = (left + 6) % 8
 
-  ### Return [suit+innie/outie] at each position as two characters
+  ### Return [suit+innie/outie] at each position as two characters,
+  ### based on the current rotation offset (self.top)
 
   def top(self): return self.iooiioo[self.top:][:2]
   def left(self): return self.iooiioo[(self.top+2)%8:][:2]
