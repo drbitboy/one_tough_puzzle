@@ -15,9 +15,9 @@ class PIECE(object):
   """
   def __init__(self, suits):
     """
-    Suits is string four suit letters (s or h or c or d), in order of
-    nominal top innie, nominal left outie, nominal bottom outie, nominal
-    right innie.
+    Suits is string with four suit letters (s or h or c or d), in order
+    of nominal top innie, nominal left outie, nominal bottom outie,
+    nominal right innie.
 
     N.B. there are eight unique [suit+innie+outie] pairs possible
 
